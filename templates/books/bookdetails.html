@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Detail</title>
+</head>
+<body>
+    
+    {% comment %} <h3> {{data1}}</h3>
+
+    <hr>
+
+    {% for k,v in data1.items %}
+      {{k}}  {{v}} <br>
+    {% endfor %}
+    <hr>
+    {{data1.list}}
+    <hr>
+    {% for i in data1.list %}
+      {{i}} <br>
+    {% endfor %} {% endcomment %}
+
+    {% comment %} <h2> Data 2</h2>
+    {{data2}}
+    <hr>
+    {% for i in  data2 %}
+     {{i}} <br>
+    {% endfor %}
+    <hr>
+
+    {% for i in  data2 %}
+    {{i.title}} <br>
+    {{i.autor}} <br>
+   {% endfor %} {% endcomment %}
+
+<h2> Data3 </h2>
+
+{{ data3 }}
+<br>
+{% for k,v in data3.items  %}
+  {{k}} 
+    {% for book_key,book_title in v.items %}
+      <li> {{book_key}} : {{book_title }}
+    
+    {% endfor %}  <br>
+{% endfor %}
+
+</body>
+</html>
